@@ -1,3 +1,10 @@
+
+
+export const metadata = {
+  title: "Brendan | Filmmaking",
+  description: "See my video content.",
+};
+
 export default function AboutMePage() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-20">

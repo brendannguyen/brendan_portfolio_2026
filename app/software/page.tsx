@@ -1,3 +1,10 @@
+
+
+export const metadata = {
+  title: "Brendan | Software",
+  description: "Everything software.",
+};
+
 export default function AboutMePage() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-20">

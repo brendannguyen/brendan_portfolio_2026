@@ -1,3 +1,9 @@
+
+export const metadata = {
+  title: "Brendan | Contact",
+  description: "Get in touch.",
+};
+
 export default function AboutMePage() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-20">
