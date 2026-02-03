@@ -16,6 +16,10 @@ import Link from "next/link";
 import { Pin } from "../animate-ui/icons/pin";
 import { Magnetic } from "../animate-ui/primitives/effects/magnetic";
 
+import { HuggingFaceIcon } from "@/app/icons/HuggingFaceIcon";
+import { GooglePlayIcon } from "@/app/icons/GooglePlayIcon";
+import { LeetCodeIcon } from "@/app/icons/LeetCodeIcon";
+
 export function LeftSidebar() {
   return (
     <div className="w-full min-h-full flex justify-center items-center pointer-events-auto">
@@ -142,6 +146,39 @@ export function LeftSidebar() {
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>GitHub</p>
+                      </TooltipContent>
+                    </Tooltip>
+                    </Magnetic>
+                    <Magnetic range={40} strength={0.25}>
+                    <Tooltip side="bottom">
+                      <TooltipTrigger asChild>
+                        <a href="https://play.google.com/store/apps/dev?id=4725217607813660973" target="_blank" rel="noopener noreferrer" className="inline-flex pointer-events-auto"
+                        ><IconButton className="hover:cursor-pointer"><GooglePlayIcon className="w-4 h-4"/></IconButton></a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Google Play</p>
+                      </TooltipContent>
+                    </Tooltip>
+                    </Magnetic>
+                    <Magnetic range={40} strength={0.25}>
+                    <Tooltip side="bottom">
+                      <TooltipTrigger asChild>
+                        <a href="https://huggingface.co/bread03" target="_blank" rel="noopener noreferrer" className="inline-flex pointer-events-auto"
+                        ><IconButton className="hover:cursor-pointer"><HuggingFaceIcon className="w-4 h-4"/></IconButton></a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Hugging Face</p>
+                      </TooltipContent>
+                    </Tooltip>
+                    </Magnetic>
+                    <Magnetic range={40} strength={0.25}>
+                    <Tooltip side="bottom">
+                      <TooltipTrigger asChild>
+                        <a href="https://leetcode.com/akimbear/" target="_blank" rel="noopener noreferrer" className="inline-flex pointer-events-auto"
+                        ><IconButton className="hover:cursor-pointer"><LeetCodeIcon className="w-4 h-4"/></IconButton></a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>LeetCode</p>
                       </TooltipContent>
                     </Tooltip>
                     </Magnetic>
