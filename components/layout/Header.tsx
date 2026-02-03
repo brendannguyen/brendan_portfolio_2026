@@ -14,14 +14,14 @@ export default function Header() {
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50
         flex items-center gap-6 px-6 py-3 rounded-xl
-        bg-card   
+        bg-card opacity-80 drop-shadow-lg
     ">
       <nav className="flex items-center gap-6">
         {/* HomePage */}
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/" className="flex items-center">
-              <AnimateIcon animateOnHover>
+              <AnimateIcon animateOnView animateOnHover>
                 <Blocks />
               </AnimateIcon>
             </Link>
@@ -35,7 +35,7 @@ export default function Header() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/about" className="flex items-center">
-              <AnimateIcon animateOnHover>
+              <AnimateIcon animateOnView animateOnHover>
                 <User />
               </AnimateIcon>
             </Link>
@@ -49,7 +49,7 @@ export default function Header() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/software" className="flex items-center">
-              <AnimateIcon animateOnHover>
+              <AnimateIcon animateOnView animateOnHover>
                 <Terminal />
               </AnimateIcon>
             </Link>
@@ -63,7 +63,7 @@ export default function Header() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/filmmaking" className="flex items-center">
-              <AnimateIcon animateOnHover>
+              <AnimateIcon animateOnView animateOnHover>
                 <Clapperboard />
               </AnimateIcon>
             </Link>
@@ -77,7 +77,7 @@ export default function Header() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/blog" className="flex items-center">
-              <AnimateIcon animateOnHover>
+              <AnimateIcon animateOnView animateOnHover>
                 <Brush />
               </AnimateIcon>
             </Link>
@@ -91,7 +91,7 @@ export default function Header() {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link href="/contact" className="flex items-center">
-              <AnimateIcon animateOnHover>
+              <AnimateIcon animateOnView animateOnHover>
                 <MessageCircleMore />
               </AnimateIcon>
             </Link>
