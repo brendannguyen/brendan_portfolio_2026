@@ -1,8 +1,3 @@
-import { IconButton } from "@/components/animate-ui/components/buttons/icon";
-import { Fade } from "@/components/animate-ui/primitives/effects/fade";
-import { Slide } from "@/components/animate-ui/primitives/effects/slide";
-import { Tilt, TiltContent } from "@/components/animate-ui/primitives/effects/tilt";
-
 
 export const metadata = {
   title: "Brendan | About Me",
@@ -12,15 +7,6 @@ export const metadata = {
 
 export default function AboutMePage() {
 
-  console.log("ABOUT CHILDREN", {
-    Tilt,
-    TiltContent,
-    Slide,
-    Fade,
-    IconButton,
-  });
-
-  
   return (
     <section className="max-w-3xl mx-auto px-6 py-20">
       <h1 className="text-4xl font-bold mb-6">About Me</h1>

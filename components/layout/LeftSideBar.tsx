@@ -14,12 +14,14 @@ import { MessageCircleHeart } from "../animate-ui/icons/message-circle-heart";
 import { ArrowRight } from "../animate-ui/icons/arrow-right";
 import Link from "next/link";
 import { Pin } from "../animate-ui/icons/pin";
+import { Magnetic } from "../animate-ui/primitives/effects/magnetic";
 
 export function LeftSidebar() {
   return (
     <div className="w-full min-h-full flex justify-center items-center pointer-events-auto">
       <div className="w-full space-y-6 justify-center flex flex-col pointer-events-auto">
         <Fade>
+          <Magnetic>
           <Tilt>
             <TiltContent>
               <p className="text-[120px] font-bold opacity-80 drop-shadow-lg text-title-text-color" style={{ lineHeight: "0.9" }}>
@@ -28,6 +30,7 @@ export function LeftSidebar() {
               </p>
             </TiltContent>
           </Tilt>
+          </Magnetic>
         </Fade>
         <Fade>
           <Slide>
@@ -41,7 +44,7 @@ export function LeftSidebar() {
                     <CardTitle className="text-lg">MESSAGE</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm pointer-events-auto">
-                    <p>A final-year software engineering with a lifelong committment to learning and development.</p>
+                    <p>A final-year software engineering student with a lifelong commitment to learning and development.</p>
                     <p>Striving to create positive change through software.</p>
                   </CardContent>
                 </Card>
@@ -120,6 +123,7 @@ export function LeftSidebar() {
                     <CardTitle className="text-lg">SOCIALS</CardTitle>
                   </CardHeader>
                   <CardContent className="gap-4 text-sm justify-center flex items-center">
+                    <Magnetic range={40} strength={0.25}>
                     <Tooltip side="bottom">
                       <TooltipTrigger asChild>
                         <a href="https://www.linkedin.com/in/brendan-nguyen-8894b7220/" target="_blank" rel="noopener noreferrer" className="inline-flex pointer-events-auto"
@@ -129,6 +133,8 @@ export function LeftSidebar() {
                         <p>LinkedIn</p>
                       </TooltipContent>
                     </Tooltip>
+                    </Magnetic>
+                    <Magnetic range={40} strength={0.25}>
                     <Tooltip side="bottom">
                       <TooltipTrigger asChild>
                         <a href="https://github.com/brendannguyen" target="_blank" rel="noopener noreferrer" className="inline-flex pointer-events-auto"
@@ -138,6 +144,7 @@ export function LeftSidebar() {
                         <p>GitHub</p>
                       </TooltipContent>
                     </Tooltip>
+                    </Magnetic>
                   </CardContent>
                 </Card>
               </TiltContent>

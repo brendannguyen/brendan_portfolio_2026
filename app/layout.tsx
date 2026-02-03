@@ -79,12 +79,12 @@ return (
             <div className="
               absolute inset-0
               flex justify-center
-              px-8 pb-8 max-w-7xl mx-auto max-h-full
+              px-8 pb-8 max-w-8xl mx-auto max-h-full
             ">
               
               {/* Two-column container */}
               <div className="
-                flex gap-8 max-w-6xl w-full
+                flex gap-8 max-w-8xl
                 max-h-full
               ">
                 
