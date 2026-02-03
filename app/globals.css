@@ -47,6 +47,7 @@
   --radius-4xl: calc(var(--radius) + 16px);
   --color-title-text-color: var(--title-text-color);
   --color-current-pos-card: var(--current-pos-card);
+  --color-experience-text: var(--experience-text);
 }
 
 :root {
@@ -85,6 +86,7 @@
   --title-card: oklch(0.889 0.060 96.4);
   --title-text-color: oklch(0.86 0.06 264.4);
   --current-pos-card: oklch(0.75 0.12 17.8);
+  --experience-text: oklch(0.46 0.20 27.5);
 }
 
 .dark {
@@ -122,6 +124,7 @@
   --title-card: oklch(0.423 0.104 22.9);
   --title-text-color: oklch(0.985 0 0);
   --current-pos-card: oklch(0.47 0.17 27.3);
+  --experience-text: oklch(0.79 0.10 18.7);
 }
 
 @layer base {
