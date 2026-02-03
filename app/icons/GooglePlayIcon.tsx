@@ -1,5 +1,5 @@
 export function GooglePlayIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path fill="none"    d="M3.5 20.548L16.73 7.745m4.321 2.529L6.511 1.762C5.176.982 3.5 1.943 3.5 3.488v17.024c0 1.545 1.677 2.506 3.01 1.726l14.541-8.512c1.32-.772 1.32-2.68 0-3.452m-4.321 5.982L3.5 3.452"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" ><path fill="none"    d="M3.5 20.548L16.73 7.745m4.321 2.529L6.511 1.762C5.176.982 3.5 1.943 3.5 3.488v17.024c0 1.545 1.677 2.506 3.01 1.726l14.541-8.512c1.32-.772 1.32-2.68 0-3.452m-4.321 5.982L3.5 3.452"/></svg>
   )
 }

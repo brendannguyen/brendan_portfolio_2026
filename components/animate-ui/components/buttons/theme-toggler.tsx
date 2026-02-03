@@ -57,6 +57,12 @@ function ThemeTogglerButton({
 }: ThemeTogglerButtonProps) {
   const { theme, resolvedTheme, setTheme } = useTheme();
 
+  // Prevent SSR mismatch
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <ThemeTogglerPrimitive
       theme={theme as ThemeSelection}
@@ -75,7 +81,7 @@ function ThemeTogglerButton({
           }}
           {...props}
         >
-          {getIcon(effective, resolved, modes)}
+          {mounted ? getIcon(effective, resolved, modes) : null}
         </button>
       )}
     </ThemeTogglerPrimitive>
