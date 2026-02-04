@@ -135,3 +135,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+.autoHideScroll {
+  overflow: auto;
+}
+
+/* Scrollbar width stays constant → no push */
+.autoHideScroll::-webkit-scrollbar {
+  width: 2px;
+}
+.autoHideScroll::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 2px;
+}
+.autoHideScroll:hover::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0);
+  
+}
+.autoHideScroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+html {
+  scrollbar-gutter: stable overlay;
+}
+

@@ -79,7 +79,7 @@ return (
             <div className="
               absolute inset-0
               flex justify-center
-              px-8 pb-8 max-w-8xl mx-auto max-h-full
+              px-8 pb-8 max-w-8xl mx-auto max-h-full 
             ">
               
               {/* Two-column container */}
@@ -92,7 +92,7 @@ return (
                 <aside
                   className="
                     w-128 shrink-0 p-4 rounded-xl
-                    overflow-y-auto min-h-0
+                    overflow-y-auto min-h-0 autoHideScroll overflow-auto
                   "
                   style={{direction: "rtl"}}
                 >
@@ -102,7 +102,7 @@ return (
                 {/* Right column (scrollable) */}
                 <main className="
                   flex-1 rounded-xl p-6
-                  overflow-y-auto min-h-0
+                  overflow-y-auto min-h-0 autoHideScroll overflow-auto
                 ">
                   {children}
                 </main>

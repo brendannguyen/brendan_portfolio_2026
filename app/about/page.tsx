@@ -176,7 +176,7 @@ export default function AboutMePage() {
                 </CardHeader>
                 <CardContent className=" text-md text-experience-text pointer-events-auto flex gap-2 flex-wrap">
                   {skills.map((skill, i) => (
-                    <Magnetic><Badge key={i}>{skill}</Badge></Magnetic>
+                    <Magnetic key={i} ><Badge >{skill}</Badge></Magnetic>
                   ))}
                 </CardContent>
               </Card>
@@ -198,7 +198,7 @@ export default function AboutMePage() {
                 </CardHeader>
                 <CardContent className=" text-md text-experience-text pointer-events-auto flex gap-2 flex-wrap">
                   {interests.map((interest, i) => (
-                    <Magnetic><Badge key={i}>{interest}</Badge></Magnetic>
+                    <Magnetic key={i}><Badge >{interest}</Badge></Magnetic>
                   ))}
                 </CardContent>
               </Card>
