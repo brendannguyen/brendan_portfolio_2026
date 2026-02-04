@@ -48,7 +48,7 @@ export default function SoftwareCard({
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">
-                  <AnimateIcon animateOnHover>
+                  <AnimateIcon animateOnView animateOnHover>
                     <Binary />
                   </AnimateIcon>
                   <CardTitle className="text-lg">{title}</CardTitle>
@@ -85,7 +85,7 @@ export default function SoftwareCard({
                       <CarouselNext className="static translate-y-0" />
                     </div>}
                   </Carousel>
-                  
+
                   <div className="flex-1 flex flex-col gap-4">
                     <p className="whitespace-pre-line">{description}</p>
                     <div className="flex gap-2">

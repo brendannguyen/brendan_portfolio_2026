@@ -1,3 +1,15 @@
+import { Tooltip, TooltipTrigger } from "@/components/animate-ui/components/animate/tooltip";
+import { Cctv } from "@/components/animate-ui/icons/cctv";
+import { Clapperboard } from "@/components/animate-ui/icons/clapperboard";
+import { AnimateIcon } from "@/components/animate-ui/icons/icon";
+import { Router } from "@/components/animate-ui/icons/router";
+import { ThumbsUp } from "@/components/animate-ui/icons/thumbs-up";
+import { Fade } from "@/components/animate-ui/primitives/effects/fade";
+import { Magnetic } from "@/components/animate-ui/primitives/effects/magnetic";
+import { Slide } from "@/components/animate-ui/primitives/effects/slide";
+import { Tilt, TiltContent } from "@/components/animate-ui/primitives/effects/tilt";
+import FilmCard from "@/components/FilmCard";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 
 export const metadata = {
@@ -5,24 +17,51 @@ export const metadata = {
   description: "See my video content.",
 };
 
-export default function AboutMePage() {
+export default function FilmPage() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-6">About Me</h1>
-
-      <p className="text-lg leading-relaxed opacity-80">
-        Hi, I’m Brendan — a developer who loves building modern, animated,
-        visually rich interfaces. I enjoy blending backend efficiency with
-        creative UI design, especially when it involves React, Next.js,
-        Tailwind, and dynamic components like Animate‑UI.
-      </p>
-
-      <p className="text-lg leading-relaxed opacity-80 mt-4">
-        I’m always exploring new ways to make interfaces feel alive, whether
-        that’s through animated headers, floating navigation, or interactive
-        backgrounds. This site is my playground for experimenting with ideas
-        and sharing what I learn.
-      </p>
+    <section className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-6 min-w-[35rem]">
+      {FilmCards.map((card, i) => (
+        <FilmCard 
+          key={i}
+          title={card.title}
+          videoSrc={card.src}
+          badgeTexts={card.badgeTexts}
+          animationDelay={card.animationDelay}
+        />
+      ))}
     </section>
   );
 }
+
+const FilmCards = [
+  {
+    title: "Artificial Observation",
+    src: "https://geo.dailymotion.com/player/xpiw2.html?video=x813av5",
+    badgeTexts: ["After Effects", "Editing", "Found Footage"],
+    animationDelay: 0
+  },
+  {
+    title: "The House Always Wins.",
+    src: "https://geo.dailymotion.com/player/xpiw2.html?video=x8266rj",
+    badgeTexts: ["After Effects", "Alternative Animation", "Stop Motion"],
+    animationDelay: 200
+  },
+  {
+    title: "Hey Little Buddy.",
+    src: "https://geo.dailymotion.com/player/xpiw2.html?video=x8266qs",
+    badgeTexts: ["After Effects", "Animation", "Comedy", "Future Machina"],
+    animationDelay: 400
+  },
+  {
+    title: "The Brick",
+    src: "https://geo.dailymotion.com/player/xpiw2.html?video=x7wubcr",
+    badgeTexts: ["Editing", "Satire", "Comedy"],
+    animationDelay: 600
+  },
+    {
+    title: "Insistent Anxiousness (Soundscape)",
+    src: "https://geo.dailymotion.com/player/xpiw2.html?video=x7scm2p",
+    badgeTexts: ["Sound Editing", "Soundscape", "Circumplex Model"],
+    animationDelay: 800
+  },
+]
