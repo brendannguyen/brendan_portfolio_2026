@@ -1,15 +1,4 @@
-import { Slide } from "@/components/animate-ui/primitives/effects/slide";
-import { Tilt, TiltContent } from "@/components/animate-ui/primitives/effects/tilt";
 import HomeCard from "@/components/HomeCard";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 
 const HomeCards = [
   {
@@ -19,7 +8,6 @@ const HomeCards = [
     imageSrc: "/promotion_imgs/spotify_showdown.webp",
     buttonLink: "https://play.google.com/store/apps/details?id=com.bn.songvsong",
     buttonLinkTooltipText: "Get on Google Play",
-    animationDelay: 0
   },
   {
     title: "Just Chillax",
@@ -28,7 +16,6 @@ const HomeCards = [
     imageSrc: "/promotion_imgs/justchillax.png",
     buttonLink: "https://justchillax.vercel.app/",
     buttonLinkTooltipText: "Explore Now",
-    animationDelay: 200
   },
   {
     title: "Binge Optimizer",
@@ -37,7 +24,6 @@ const HomeCards = [
     imageSrc: "/promotion_imgs/bingeoptimizer.png",
     buttonLink: "https://bingeoptimizer.vercel.app/",
     buttonLinkTooltipText: "Start Optimizing Now",
-    animationDelay: 400
   },
 ]
 
@@ -53,7 +39,7 @@ export default function Home() {
           imageSrc={card.imageSrc}
           buttonLink={card.buttonLink}
           buttonLinkToolTipText={card.buttonLinkTooltipText}
-          animationDelay={card.animationDelay}
+          animationDelay={i * 200}
         />
       ))}
     </section>

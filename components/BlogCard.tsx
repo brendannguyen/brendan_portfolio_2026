@@ -15,9 +15,10 @@ import { Badge } from "./ui/badge"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
 import { Binary } from "./animate-ui/icons/binary"
 
-interface SoftwareCardProps {
+interface BlogCardProps {
   title?: string;
-  media?: SoftwareMediaSection[];
+  date?: string,
+  media?: BlogMediaSection[];
   description?: string;
   badgeTexts?: string[],
   buttonLink?: string;
@@ -25,21 +26,22 @@ interface SoftwareCardProps {
   animationDelay?: number;
 }
 
-interface SoftwareMediaSection {
+interface BlogMediaSection {
     title: string,
     type: string,
     src: string
 }
 
-export default function SoftwareCard({
-  title = "Software Card",
+export default function BlogCard({
+  title = "Blog Card",
+  date = new Date().toLocaleDateString("en-GB"),
   description = "",
   media = [],
   buttonLink = "/",
   badgeTexts = [],
   buttonLinkToolTipText = "See more.",
   animationDelay = 0,
-}: SoftwareCardProps) {
+}: BlogCardProps) {
 
     return (
       <Fade delay={animationDelay}>
@@ -51,7 +53,7 @@ export default function SoftwareCard({
                   <AnimateIcon animateOnView animateOnHover>
                     <Binary />
                   </AnimateIcon>
-                  <CardTitle className="text-lg">{title}</CardTitle>
+                  <CardTitle className="text-lg flex justify-between w-full"><p>{title}</p><p className="opacity-60">{date}</p></CardTitle>
                 </CardHeader>
 
                 <CardContent className="space-y-2 text-sm pointer-events-auto flex gap-4">

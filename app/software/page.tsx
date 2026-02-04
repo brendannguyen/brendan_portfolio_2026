@@ -18,7 +18,7 @@ export default function SoftwarePage() {
           media={card.media}
           buttonLink={card.buttonLink}
           buttonLinkToolTipText={card.buttonLinkTooltipText}
-          animationDelay={card.animationDelay}
+          animationDelay={i * 200}
         />
       ))}
     </section>
@@ -44,7 +44,6 @@ const SoftwareCards = [
     badgeTexts: ["React", "TMDb API", "JavaScript"],
     buttonLink: "https://bingeoptimizer.vercel.app/",
     buttonLinkTooltipText: "Start Optimizing Now",
-    animationDelay: 0
   },
   {
     title: "Spotify Showdown",
@@ -69,7 +68,6 @@ const SoftwareCards = [
     badgeTexts: ["Spotify API", "Java", "Android Studio"],
     buttonLink: "https://play.google.com/store/apps/details?id=com.bn.songvsong",
     buttonLinkTooltipText: "Get on Google Play",
-    animationDelay: 200
   },
   {
     title: "Just Chillax",
@@ -94,7 +92,6 @@ const SoftwareCards = [
     badgeTexts: ["React", "YouTube API", "JavaScript", "ThreeJS"],
     buttonLink: "https://justchillax.vercel.app/",
     buttonLinkTooltipText: "Explore Now",
-    animationDelay: 400
   },
   {
     title: "JRVS (University Project)",
@@ -129,7 +126,6 @@ const SoftwareCards = [
     badgeTexts: ["React", "MongoDB", "JavaScript", "Express", "Software Practice"],
     buttonLink: "https://github.com/Monash-FIT3170/JRVS",
     buttonLinkTooltipText: "See GitHub Repo",
-    animationDelay: 600
   },
   {
     title: "Old Personal Portfolio Website",
@@ -144,7 +140,6 @@ const SoftwareCards = [
     badgeTexts: ["React", "JavaScript", "React-Responsive", "tsParticles", "MUI Library"],
     buttonLink: "https://old-brendannguyen.vercel.app",
     buttonLinkTooltipText: "Old Portfolio Website",
-    animationDelay: 800
   },
   {
     title: "Fiery Dragons Game (University Project)",
@@ -164,7 +159,6 @@ const SoftwareCards = [
     badgeTexts: ["Java", "JavaSwing", "Object Oriented Design", "Design Patterns"],
     buttonLink: "https://www.dropbox.com/scl/fi/q0r4hpimr213k4y2jxzy9/FieryDragons.jar?rlkey=vbirsddsp7jh3o2blxrqsaps9&st=3hbyno6w&dl=0",
     buttonLinkTooltipText: "Dropbox",
-    animationDelay: 1000
   },
   {
     title: "Beat Em Up Game Prototype (University Project)",
@@ -179,7 +173,6 @@ const SoftwareCards = [
     badgeTexts: ["C++", "Unreal Engine 5", "Games Programming"],
     buttonLink: "https://www.dropbox.com/scl/fi/niowj4vv9e3l1pbl3yyer/Game-Prototype.zip?rlkey=hh6kqajs70ifzbwpcr00dya78&st=e2xqf51y&dl=0",
     buttonLinkTooltipText: "Dropbox",
-    animationDelay: 1200
   },
   {
     title: "Agile Project Tool Web Application",
@@ -204,7 +197,6 @@ const SoftwareCards = [
     badgeTexts: ["CSS", "JavaScript", "NodeJS", "EJS", "Scrum Agile"],
     buttonLink: "",
     buttonLinkTooltipText: "",
-    animationDelay: 1400
   },
   {
     title: "Quality Testing & CI/CD",
@@ -229,7 +221,6 @@ const SoftwareCards = [
     badgeTexts: ["Python", "GitLab", "CI/CD", "Pytest"],
     buttonLink: "",
     buttonLinkTooltipText: "",
-    animationDelay: 1600
   },
   {
     title: "Arduino Traffic System",
@@ -249,6 +240,5 @@ const SoftwareCards = [
     badgeTexts: ["Python", "Arduino", "Electronics"],
     buttonLink: "",
     buttonLinkTooltipText: "",
-    animationDelay: 1800
   },
 ]
