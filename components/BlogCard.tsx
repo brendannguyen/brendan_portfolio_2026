@@ -13,7 +13,7 @@ import Image from "next/image"
 import { Shine } from "./animate-ui/primitives/effects/shine"
 import { Badge } from "./ui/badge"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
-import { Binary } from "./animate-ui/icons/binary"
+import { MessageSquareQuote } from "./animate-ui/icons/message-square-quote"
 
 interface BlogCardProps {
   title?: string;
@@ -51,7 +51,7 @@ export default function BlogCard({
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">
                   <AnimateIcon animateOnView animateOnHover>
-                    <Binary />
+                    <MessageSquareQuote />
                   </AnimateIcon>
                   <CardTitle className="text-lg flex justify-between w-full"><p>{title}</p><p className="opacity-60">{date}</p></CardTitle>
                 </CardHeader>

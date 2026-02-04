@@ -19,6 +19,7 @@ import { Magnetic } from "../animate-ui/primitives/effects/magnetic";
 import { HuggingFaceIcon } from "@/app/icons/HuggingFaceIcon";
 import { GooglePlayIcon } from "@/app/icons/GooglePlayIcon";
 import { LeetCodeIcon } from "@/app/icons/LeetCodeIcon";
+import { Badge } from "../ui/badge";
 
 export function LeftSidebar() {
   return (
@@ -93,13 +94,21 @@ export function LeftSidebar() {
                     </AnimateIcon>
                     <CardTitle className="text-lg">SKILLS</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-md">
-                    <p>FRONT-END, BACK-END, AWS SERVICES, INFRASTRUCTURE AS CODE, K8s, ADOBE CC...</p>
+                  <CardContent className="text-md gap-2 flex flex-wrap">
+                    <Magnetic><Badge className="text-sm">Software</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">Filmmaking</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">Front-end</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">Back-end</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">AWS Services</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">Infrastructure as Code</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">Kubernetes</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">Adobe CC</Badge></Magnetic>
+                    <Magnetic><Badge className="text-sm">...</Badge></Magnetic>
                   </CardContent>
                   <CardFooter className="flex justify-end">
                     <Tooltip side="bottom">
                       <TooltipTrigger asChild>
-                        <Link href="/about" className="flex items-center">
+                        <Link href="/about#skills-expanded" className="flex items-center">
                           <AnimateIcon animateOnHover>
                             <ArrowRight />
                           </AnimateIcon>

@@ -167,7 +167,7 @@ export default function AboutMePage() {
         <Slide delay={600}>
           <Tilt className="pointer-events-none">
             <TiltContent className="pointer-events-auto">
-              <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
+              <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto" id="skills-expanded">
                 <CardHeader className="flex">
                   <AnimateIcon animateOnView animateOnHover>
                     <Pickaxe />
