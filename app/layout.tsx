@@ -94,6 +94,7 @@ return (
                     w-128 shrink-0 p-4 rounded-xl
                     overflow-y-auto min-h-0
                   "
+                  style={{direction: "rtl"}}
                 >
                   <LeftSidebar />
                 </aside>

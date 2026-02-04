@@ -22,7 +22,7 @@ import { LeetCodeIcon } from "@/app/icons/LeetCodeIcon";
 
 export function LeftSidebar() {
   return (
-    <div className="w-full min-h-full flex justify-center items-center pointer-events-auto">
+    <div className="w-full min-h-full flex justify-center items-center pointer-events-auto" style={{direction: "ltr"}}>
       <div className="w-full space-y-6 justify-center flex flex-col pointer-events-auto">
         <Fade>
           <Magnetic>
