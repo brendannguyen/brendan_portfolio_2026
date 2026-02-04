@@ -14,6 +14,7 @@ import { Shine } from "./animate-ui/primitives/effects/shine"
 import { Badge } from "./ui/badge"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
 import { MessageSquareQuote } from "./animate-ui/icons/message-square-quote"
+import { ImageZoom } from "./animate-ui/primitives/effects/image-zoom"
 
 interface BlogCardProps {
   title?: string;
@@ -70,12 +71,14 @@ export default function BlogCard({
                                 className="absolute inset-0 w-full h-full rounded-xl"
                               />
                             ) : (
-                              <Image
-                                src={m.src}
-                                alt={m.title}
-                                fill
-                                className="object-cover rounded-xl"
-                              />
+                              <ImageZoom zoomScale={1.5}>
+                                <Image
+                                  src={m.src}
+                                  alt={m.title}
+                                  fill
+                                  className="object-cover rounded-xl"
+                                />
+                              </ImageZoom>
                             )}
                           </div></Shine>
                         </CarouselItem>

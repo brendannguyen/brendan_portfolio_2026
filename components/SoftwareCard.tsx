@@ -14,6 +14,7 @@ import { Shine } from "./animate-ui/primitives/effects/shine"
 import { Badge } from "./ui/badge"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
 import { Binary } from "./animate-ui/icons/binary"
+import { ImageZoom } from "./animate-ui/primitives/effects/image-zoom"
 
 interface SoftwareCardProps {
   title?: string;
@@ -68,12 +69,14 @@ export default function SoftwareCard({
                                 className="absolute inset-0 w-full h-full rounded-xl"
                               />
                             ) : (
-                              <Image
-                                src={m.src}
-                                alt={m.title}
-                                fill
-                                className="object-cover rounded-xl"
-                              />
+                              <ImageZoom zoomScale={1.5}>
+                                <Image
+                                  src={m.src}
+                                  alt={m.title}
+                                  fill
+                                  className="object-cover rounded-xl"
+                                />
+                              </ImageZoom>
                             )}
                           </div></Shine>
                         </CarouselItem>
