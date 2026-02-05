@@ -13,5 +13,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/"], // or ["/*"] if you want all routes
+  matcher: ["/(.*)"], // or ["/(.*)"] if you want all routes
 };
