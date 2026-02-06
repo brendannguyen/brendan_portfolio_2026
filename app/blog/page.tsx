@@ -30,7 +30,7 @@ export default function AboutMePage() {
 const BlogCards = [
   {
     title: "More projects coming soon...",
-    date: "05/02/2026",
+    date: "06/02/2026",
     description: "Another project is in the works...",
     media: [
       {
@@ -45,7 +45,7 @@ const BlogCards = [
   },
   {
     title: "Portfolio website now mobile friendly!",
-    date: "04/02/2026",
+    date: "06/02/2026",
     description: "Using react-responsive, I made the UI responsive to device dimensions, including a drawer mobile navigation as the normal header was not mobile friendly. Now time for another project.",
     media: [
       {
