@@ -130,7 +130,7 @@ return (
                   </div>
 
                   {/* Children scroll independently */}
-                  <div className="flex-1 mt-6 -px-6">
+                  <div className="flex-1 mt-6 -px-6 mb-6">
                     {children}
                   </div>
 
