@@ -15,6 +15,7 @@ import { Badge } from "./ui/badge"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
 import { MessageSquareQuote } from "./animate-ui/icons/message-square-quote"
 import { ImageZoom } from "./animate-ui/primitives/effects/image-zoom"
+import { useMediaQuery } from "react-responsive"
 
 interface BlogCardProps {
   title?: string;
@@ -44,12 +45,15 @@ export default function BlogCard({
   animationDelay = 0,
 }: BlogCardProps) {
 
+  const isMobile = useMediaQuery({ maxWidth: 1020 })
+  const isSmallDesktop = useMediaQuery({ maxWidth: 1200  });
+
     return (
       <Fade delay={animationDelay}>
         <Slide delay={animationDelay}>
           <Tilt className="pointer-events-none">
             <TiltContent className="pointer-events-auto">
-              <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
+              <Card className={"w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto "  + (!isMobile && " min-w-[35rem]")}>
                 <CardHeader className="flex">
                   <AnimateIcon animateOnView animateOnHover>
                     <MessageSquareQuote />
@@ -57,9 +61,8 @@ export default function BlogCard({
                   <CardTitle className="text-lg flex justify-between w-full"><p>{title}</p><p className="opacity-60">{date}</p></CardTitle>
                 </CardHeader>
 
-                <CardContent className="space-y-2 text-sm pointer-events-auto flex gap-4">
-
-                  <Carousel className="w-1/2">
+                <CardContent className={"space-y-2 text-sm pointer-events-auto flex gap-4 " + (isSmallDesktop && " flex-col")}>
+                  <Carousel className={(isSmallDesktop ? " w-full" : " w-1/2")}>
                     <CarouselContent>
                       {media.map((m, i) => (
                         <CarouselItem key={i} className="relative">
@@ -86,14 +89,14 @@ export default function BlogCard({
                     </CarouselContent>
                     {media && media.length > 1 &&
                     <div className="flex justify-center gap-4 mt-4">
-                      <CarouselPrevious className="static translate-y-0" />
-                      <CarouselNext className="static translate-y-0" />
+                      <CarouselPrevious className="text-white static translate-y-0" />
+                      <CarouselNext className="text-white static translate-y-0" />
                     </div>}
                   </Carousel>
 
                   <div className="flex-1 flex flex-col gap-4">
                     <p className="whitespace-pre-line">{description}</p>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap">
                       {Array.isArray(badgeTexts)
                         ? badgeTexts.map((badgeText, i) => (
                           <Magnetic key={i}><Badge>{badgeText}</Badge></Magnetic>

@@ -33,7 +33,7 @@ const interests = [
 export default function AboutMePage() {
 
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-6">
+    <section className="max-w-3xl mx-auto flex flex-col gap-6">
       <Fade >
         <Slide >
           <Tilt className="pointer-events-none">
@@ -73,8 +73,8 @@ export default function AboutMePage() {
                   </AnimateIcon>
                   <CardTitle className="text-lg">Experiences</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-2 text-md text-experience-text pointer-events-auto flex flex-col gap-4">
-                  <div className="flex justify-between">
+                <CardContent className="space-y-2 text-md text-experience-text pointer-events-auto flex flex-col gap-4 flex-wrap">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Terminal />
@@ -83,7 +83,7 @@ export default function AboutMePage() {
                     </div>
                     <p>January 2026 - Now</p>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Lightbulb />
@@ -92,7 +92,7 @@ export default function AboutMePage() {
                     </div>
                     <p>February 2025 - January 2026</p>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Clapperboard />
@@ -101,7 +101,7 @@ export default function AboutMePage() {
                     </div>
                     <p>2023, 2024</p>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Cctv />
@@ -128,8 +128,8 @@ export default function AboutMePage() {
                   </AnimateIcon>
                   <CardTitle className="text-lg">Qualifications</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-2 text-md text-experience-text pointer-events-auto flex flex-col gap-4">
-                  <div className="flex justify-between">
+                <CardContent className="space-y-2 text-md text-experience-text pointer-events-auto flex flex-col gap-4 flex-wrap">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Pickaxe />
@@ -138,7 +138,7 @@ export default function AboutMePage() {
                     </div>
                     <p>2022 - 2026</p>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Clapperboard />
@@ -147,7 +147,7 @@ export default function AboutMePage() {
                     </div>
                     <p>2019 - 2021</p>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between flex-wrap">
                     <div className="flex gap-2">
                       <AnimateIcon animateOnView animateOnHover>
                         <Hammer />

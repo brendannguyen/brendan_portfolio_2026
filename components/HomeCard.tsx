@@ -14,6 +14,8 @@ import Image from "next/image"
 import { Shine } from "./animate-ui/primitives/effects/shine"
 import { Badge } from "./ui/badge"
 
+import { useMediaQuery } from 'react-responsive'
+
 
 interface HomeCardProps {
   imageSrc?: string;
@@ -35,6 +37,8 @@ export default function HomeCard({
   animationDelay = 0,
 }: HomeCardProps) {
 
+  const isSmallDesktop = useMediaQuery({ maxWidth: 1200  });
+
     return (
       <Fade delay={animationDelay}>
         <Slide delay={animationDelay}>
@@ -48,20 +52,20 @@ export default function HomeCard({
                   <CardTitle className="text-lg">{title}</CardTitle>
                 </CardHeader>
 
-                <CardContent className="space-y-2 text-md pointer-events-auto flex gap-4">
-                  <Shine color="white" className="rounded-xl mb-4 w-1/2" delay={animationDelay}>
-                  <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl shrink-0">
+                <CardContent className={"space-y-2 text-md pointer-events-auto flex gap-4 " + (isSmallDesktop && "flex-col")}>
+                  <div className={"relative aspect-[4/3] overflow-hidden rounded-xl " + (isSmallDesktop ? " w-full max-h-[300px]" : " w-1/2")}>
+                  <Shine color="white" className={"aspect-[4/3] rounded-xl "} delay={animationDelay}>
                     <Image
                       src={imageSrc}
                       alt={title}
                       fill
                       className="object-cover"
-                    />
+                    /></Shine>
                   </div>
-                  </Shine>
+                
                   <div className="flex-1 flex flex-col gap-4">
                     <p className="whitespace-pre-line">{description}</p>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap">
                       {Array.isArray(badgeTexts)
                         ? badgeTexts.map((badgeText, i) => (
                           <Magnetic key={i}><Badge>{badgeText}</Badge></Magnetic>

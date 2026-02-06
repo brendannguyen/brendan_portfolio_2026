@@ -1,3 +1,5 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
@@ -9,6 +11,8 @@ import { ThemeTogglerButton } from "@/components/animate-ui/components/buttons/t
 import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
 import { Fade } from "@/components/animate-ui/primitives/effects/fade";
 import { LeftSidebar } from "@/components/layout/LeftSideBar";
+import MediaQuery, { useMediaQuery } from "react-responsive";
+import MobileHeader from "@/components/layout/MobileHeader";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -25,16 +29,15 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Brendan Nguyen",
-  description: "Brendan Nguyen Portfolio",
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const isMobile = useMediaQuery({ maxWidth: 1020 })
+
 return (
   <html lang="en" suppressHydrationWarning className={`${robotoCondensed.variable} ${robotoMono.variable}`}>
     <body className={`antialiased h-screen overflow-hidden flex flex-col`}>
@@ -51,25 +54,32 @@ return (
         <TooltipProvider>
           <div className="h-22 max-h-22 flex items-center justify-between px-6">
             <Fade delay={100}>
-              <Header />
+              <MediaQuery minWidth={541}>
+                <Header />
+              </MediaQuery>
+              <MediaQuery maxWidth={540}>
+                <MobileHeader />
+              </MediaQuery>
             </Fade>
-            <div className="absolute left-1/2 translate-x-[calc(50%+10rem)] pointer-events-auto top-9">
-              <Fade delay={100}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <ThemeTogglerButton
-                      variant="accent"
-                      size="sm"
-                      className="bg-card rounded-xl opacity-80 hover:cursor-pointer"
-                      modes={['light', 'dark']}
-                    />
-                </TooltipTrigger>
-                  <TooltipContent>
-                    Toggle Theme
-                  </TooltipContent>
-                </Tooltip>
-              </Fade>
-            </div>
+            <MediaQuery minWidth={541}>
+              <div className="absolute left-1/2 translate-x-[calc(50%+10rem)] pointer-events-auto top-9">
+                <Fade delay={100}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <ThemeTogglerButton
+                        variant="accent"
+                        size="sm"
+                        className="bg-card rounded-xl opacity-80 hover:cursor-pointer"
+                        modes={['light', 'dark']}
+                      />
+                  </TooltipTrigger>
+                    <TooltipContent>
+                      Toggle Theme
+                    </TooltipContent>
+                  </Tooltip>
+                </Fade>
+              </div>
+            </MediaQuery>
           </div>
 
           {/* Remaining space below header */}
@@ -82,32 +92,52 @@ return (
               px-8 pb-8 max-w-8xl mx-auto max-h-full 
             ">
               
-              {/* Two-column container */}
-              <div className="
-                flex gap-8 max-w-8xl
-                max-h-full
-              ">
-                
-                {/* Left column (fixed height, no scroll) */}
-                <aside
-                  className="
-                    w-128 shrink-0 p-4 rounded-xl
-                    overflow-y-auto min-h-0 autoHideScroll overflow-auto
-                  "
-                  style={{direction: "rtl"}}
-                >
-                  <LeftSidebar />
-                </aside>
-
-                {/* Right column (scrollable) */}
-                <main className="
-                  flex-1 rounded-xl p-6
-                  overflow-y-auto min-h-0 autoHideScroll overflow-auto
+              <MediaQuery minWidth={1021}>
+                {/* Two-column container */}
+                <div className="
+                  flex gap-8 max-w-8xl
+                  max-h-full
                 ">
-                  {children}
-                </main>
+                  
+                  {/* Left column (fixed height, no scroll) */}
+                  <aside
+                    className="
+                      w-128 shrink-0 p-4 rounded-xl
+                      overflow-y-auto min-h-0 autoHideScroll overflow-auto
+                    "
+                    style={{direction: "rtl"}}
+                  >
+                    <LeftSidebar />
+                  </aside>
 
-              </div>
+                  {/* Right column (scrollable) */}
+                  <main className="
+                    flex-1 rounded-xl p-6
+                    overflow-y-auto min-h-0 autoHideScroll overflow-auto py-20
+                  ">
+                    {children}
+                  </main>
+
+                </div>
+              </MediaQuery>
+
+              <MediaQuery maxWidth={1020}>
+                <div className="flex flex-col h-full overflow-y-auto autoHideScroll overflow-auto">
+                  
+                  {/* Sidebar stays fixed at the top of the column */}
+                  <div className="shrink-0 z-10">
+                    <LeftSidebar />
+                  </div>
+
+                  {/* Children scroll independently */}
+                  <div className="flex-1 mt-6 -px-6">
+                    {children}
+                  </div>
+
+                </div>
+              </MediaQuery>
+
+
             </div>
 
           </div>

@@ -19,7 +19,7 @@ export default function ContactPage() {
   const site = 'gmail.com';
 
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-6">
+    <section className="max-w-3xl mx-auto flex flex-col gap-6">
       <Fade >
         <Slide >
           <Tilt className="pointer-events-none">

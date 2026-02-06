@@ -15,6 +15,7 @@ import { Badge } from "./ui/badge"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
 import { Binary } from "./animate-ui/icons/binary"
 import { ImageZoom } from "./animate-ui/primitives/effects/image-zoom"
+import { useMediaQuery } from "react-responsive"
 
 interface SoftwareCardProps {
   title?: string;
@@ -42,6 +43,8 @@ export default function SoftwareCard({
   animationDelay = 0,
 }: SoftwareCardProps) {
 
+  const isSmallDesktop = useMediaQuery({ maxWidth: 1200  });
+
     return (
       <Fade delay={animationDelay}>
         <Slide delay={animationDelay}>
@@ -55,13 +58,13 @@ export default function SoftwareCard({
                   <CardTitle className="text-lg">{title}</CardTitle>
                 </CardHeader>
 
-                <CardContent className="space-y-2 text-sm pointer-events-auto flex gap-4">
+                <CardContent className={"space-y-2 text-sm pointer-events-auto flex gap-4 " + (isSmallDesktop && " flex-col")}>
 
-                  <Carousel className="w-1/2">
+                  <Carousel className={(isSmallDesktop ? " w-full" : " w-1/2")}>
                     <CarouselContent>
                       {media.map((m, i) => (
                         <CarouselItem key={i} className="relative">
-                          <Shine color="white" className="rounded-xl"><div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl">
+                          <Shine color="white" className="rounded-xl"><div className={"relative w-full aspect-[4/3] overflow-hidden rounded-xl " + (isSmallDesktop && " max-h-[300px]")}>
                             {m.type === "video" ? (
                               <iframe
                                 src={m.src}
@@ -84,14 +87,14 @@ export default function SoftwareCard({
                     </CarouselContent>
                     {media && media.length > 1 &&
                     <div className="flex justify-center gap-4 mt-4">
-                      <CarouselPrevious className="static translate-y-0" />
-                      <CarouselNext className="static translate-y-0" />
+                      <CarouselPrevious className="text-white static translate-y-0" />
+                      <CarouselNext className="text-white static translate-y-0" />
                     </div>}
                   </Carousel>
 
                   <div className="flex-1 flex flex-col gap-4">
                     <p className="whitespace-pre-line">{description}</p>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap">
                       {Array.isArray(badgeTexts)
                         ? badgeTexts.map((badgeText, i) => (
                           <Magnetic key={i}><Badge>{badgeText}</Badge></Magnetic>

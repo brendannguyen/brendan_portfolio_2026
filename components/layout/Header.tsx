@@ -11,6 +11,7 @@ import { Brush } from "../animate-ui/icons/brush";
 import { MessageCircleMore } from "../animate-ui/icons/message-circle-more";
 
 export default function Header() {
+
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50
         flex items-center gap-6 px-6 py-3 rounded-xl

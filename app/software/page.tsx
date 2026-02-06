@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function SoftwarePage() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-6">
+    <section className="max-w-3xl mx-auto flex flex-col gap-6">
       {SoftwareCards.map((card, i) => (
         <SoftwareCard 
           key={i}

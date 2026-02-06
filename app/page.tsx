@@ -1,4 +1,5 @@
 import HomeCard from "@/components/HomeCard";
+import type { Metadata } from "next";
 
 const HomeCards = [
   {
@@ -27,9 +28,15 @@ const HomeCards = [
   },
 ]
 
+export const metadata: Metadata = {
+  title: "Brendan Nguyen",
+  description: "Brendan Nguyen Portfolio",
+};
+
+
 export default function Home() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-6">
+    <section className="max-w-3xl mx-auto flex flex-col gap-6">
       {HomeCards.map((card, i) => (
         <HomeCard 
           key={i}

@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function FilmPage() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-20 flex flex-col gap-6 min-w-[35rem]">
+    <section className="max-w-3xl mx-auto flex flex-col gap-6">
       {FilmCards.map((card, i) => (
         <FilmCard 
           key={i}

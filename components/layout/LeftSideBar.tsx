@@ -20,8 +20,20 @@ import { HuggingFaceIcon } from "@/app/icons/HuggingFaceIcon";
 import { GooglePlayIcon } from "@/app/icons/GooglePlayIcon";
 import { LeetCodeIcon } from "@/app/icons/LeetCodeIcon";
 import { Badge } from "../ui/badge";
+import { useMediaQuery } from "react-responsive";
 
 export function LeftSidebar() {
+
+  const isMobileLarge = useMediaQuery({ minWidth: 381, maxWidth: 540 })
+  const isMobileSmall = useMediaQuery({ maxWidth: 380 })
+
+  const sizeClass = isMobileSmall
+  ? "text-[60px]"
+  : isMobileLarge
+  ? "text-[80px]"
+  : "text-[120px]";
+
+
   return (
     <div className="w-full min-h-full flex justify-center items-center pointer-events-auto" style={{direction: "ltr"}}>
       <div className="w-full space-y-6 justify-center flex flex-col pointer-events-auto">
@@ -29,7 +41,7 @@ export function LeftSidebar() {
           <Magnetic>
           <Tilt>
             <TiltContent>
-              <p className="text-[120px] font-bold opacity-80 drop-shadow-lg text-title-text-color" style={{ lineHeight: "0.9" }}>
+              <p className={"font-bold opacity-80 drop-shadow-lg text-title-text-color " + sizeClass} style={{ lineHeight: "0.9" }}>
                 <span>BRENDAN</span><br />
                 <span>NGUYEN</span>
               </p>
@@ -135,7 +147,7 @@ export function LeftSidebar() {
                     </AnimateIcon>
                     <CardTitle className="text-lg">SOCIALS</CardTitle>
                   </CardHeader>
-                  <CardContent className="gap-4 text-sm justify-center flex items-center">
+                  <CardContent className="gap-4 text-sm justify-center flex items-center flex-wrap">
                     <Magnetic range={40} strength={0.25}>
                     <Tooltip side="bottom">
                       <TooltipTrigger asChild>
