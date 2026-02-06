@@ -44,6 +44,21 @@ const BlogCards = [
     buttonLinkTooltipText: "",
   },
   {
+    title: "Portfolio website now mobile friendly!",
+    date: "04/02/2026",
+    description: "Using react-responsive, I made the UI responsive to device dimensions, including a drawer mobile navigation as the normal header was not mobile friendly. Now time for another project.",
+    media: [
+      {
+        title: "Mobile Friendly Website",
+        type: "image",
+        src: "/blog_media/portfolio_mobile_2026.png",
+      },
+    ],
+    badgeTexts: ["react-responsive"],
+    buttonLink: "",
+    buttonLinkTooltipText: "",
+  },
+  {
     title: "New look portfolio website for 2026 onwards.",
     date: "04/02/2026",
     description: "Using react, nextjs, with some animation ui libraries, I updated my portfolio with a new look and feel.\n\nIt now looks more modern and with up to date information. \n\nHowever, I still need to make it mobile friendly.",
