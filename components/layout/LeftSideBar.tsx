@@ -73,7 +73,7 @@ export function LeftSidebar() {
                   </CardHeader>
                   <CardContent className={"space-y-2 text-sm pointer-events-auto flex gap-4 " + (isMobile && " flex-col items-center text-center")}>
                     <div className={"relative aspect-square overflow-hidden rounded-xl " + (imageClass)}>
-                      <Shine color="white" className={"aspect-square rounded-xl"}>
+                      
                         <motion.div
                           animate={{
                             borderRadius: [
@@ -88,9 +88,9 @@ export function LeftSidebar() {
                           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <img src="/portrait/bn_portrait_square.jpg" className="object-cover" />
+                          <Shine color="white" className={"aspect-square rounded-xl"}><img src="/portrait/bn_portrait_square.jpg" className="object-cover" /></Shine>
                         </motion.div>
-                      </Shine>
+                      
                     </div>
                     <div className="flex flex-col flex-wrap gap-2">
                       <p>A final-year software engineering student with a lifelong commitment to learning and development.</p>
