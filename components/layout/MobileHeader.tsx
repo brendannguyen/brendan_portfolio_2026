@@ -33,16 +33,9 @@ export default function MobileHeader() {
         flex items-center gap-6 px-6 py-3 rounded-xl
         bg-card opacity-80 drop-shadow-lg
         ">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <AnimateIcon animateOnHover animateOnTap className="hover:cursor-pointer">
-                <Menu />
-              </AnimateIcon>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Menu</p>
-            </TooltipContent>
-          </Tooltip>
+          <AnimateIcon animateOnHover animateOnTap className="hover:cursor-pointer">
+            <Menu />
+          </AnimateIcon>
         </header> 
       </DrawerTrigger>
       <DrawerContent className="opacity-80 bg-card border-none rounded-r-xl">
