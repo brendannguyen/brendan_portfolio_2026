@@ -21,17 +21,28 @@ import { GooglePlayIcon } from "@/app/icons/GooglePlayIcon";
 import { LeetCodeIcon } from "@/app/icons/LeetCodeIcon";
 import { Badge } from "../ui/badge";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
+import { Shine } from "../animate-ui/primitives/effects/shine";
+import { motion } from "framer-motion";
 
 export function LeftSidebar() {
 
   const isMobileLarge = useMediaQuery({ minWidth: 381, maxWidth: 540 })
   const isMobileSmall = useMediaQuery({ maxWidth: 380 })
+  const isDesktopSmall = useMediaQuery({ minWidth: 541, maxWidth: 1020 })
+  const isMobile = useMediaQuery({ maxWidth: 540 })
 
   const sizeClass = isMobileSmall
   ? "text-[60px]"
   : isMobileLarge
   ? "text-[80px]"
   : "text-[120px]";
+
+  const imageClass = isDesktopSmall
+  ? "w-[150px]"
+  : isMobile
+  ? "w-[100px]"
+  : "w-1/2"
 
 
   return (
@@ -60,9 +71,31 @@ export function LeftSidebar() {
                     </AnimateIcon>
                     <CardTitle className="text-lg">MESSAGE</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2 text-sm pointer-events-auto">
-                    <p>A final-year software engineering student with a lifelong commitment to learning and development.</p>
-                    <p>Striving to create positive change through software.</p>
+                  <CardContent className={"space-y-2 text-sm pointer-events-auto flex gap-4 " + (isMobile && " flex-col items-center text-center")}>
+                    <div className={"relative aspect-square overflow-hidden rounded-xl " + (imageClass)}>
+                      <Shine color="white" className={"aspect-square rounded-xl"}>
+                        <motion.div
+                          animate={{
+                            borderRadius: [
+                              "20% 40% 40% 20%",
+                              "28% 36% 44% 18%",
+                              "35% 25% 30% 45%",
+                              "26% 48% 38% 30%",
+                              "32% 22% 28% 50%",
+                              "20% 40% 40% 20%"
+                            ]
+                          }}
+                          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <img src="/portrait/bn_portrait_square.jpg" className="object-cover" />
+                        </motion.div>
+                      </Shine>
+                    </div>
+                    <div className="flex flex-col flex-wrap gap-2">
+                      <p>A final-year software engineering student with a lifelong commitment to learning and development.</p>
+                      <Magnetic range={80} strength={0.25}><p className="font-medium">Striving to create positive change through software.</p></Magnetic>
+                    </div>
                   </CardContent>
                 </Card>
               </TiltContent>
