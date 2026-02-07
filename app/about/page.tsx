@@ -1,3 +1,5 @@
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/animate-ui/components/animate/tooltip";
+import { Blocks } from "@/components/animate-ui/icons/blocks";
 import { Cctv } from "@/components/animate-ui/icons/cctv";
 import { Clapperboard } from "@/components/animate-ui/icons/clapperboard";
 import { Forklift } from "@/components/animate-ui/icons/forklift";
@@ -9,12 +11,14 @@ import { Lightbulb } from "@/components/animate-ui/icons/lightbulb";
 import { Pickaxe } from "@/components/animate-ui/icons/pickaxe";
 import { Terminal } from "@/components/animate-ui/icons/terminal";
 import { User } from "@/components/animate-ui/icons/user";
+import { LiquidButton } from "@/components/animate-ui/primitives/buttons/liquid";
 import { Fade } from "@/components/animate-ui/primitives/effects/fade";
 import { Magnetic } from "@/components/animate-ui/primitives/effects/magnetic";
 import { Slide } from "@/components/animate-ui/primitives/effects/slide";
 import { Tilt, TiltContent } from "@/components/animate-ui/primitives/effects/tilt";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 export const metadata = {
   title: "Brendan | About Me",
@@ -55,6 +59,11 @@ export default function AboutMePage() {
                   <p>
                     I also have experiences in the sports media industry and in the retail industry which has taught me valuable lessons and has helped me to develop my collaborating skills to output a product or service that is effective and of as high quality as possible. I am always eager to learn new skills and gain new experiences, so please feel free to contact me relating to potential opportunities in software and filmmaking.
                   </p>
+                  <Link href="/Brendan_Nguyen_Quick_Resume.pdf" download className="hover:cursor-pointer w-fit">
+                  <LiquidButton className="hover:cursor-pointer text-sm w-fit font-medium px-4 py-2 h-10 overflow-hidden [--liquid-button-color:var(--primary)] [--liquid-button-background-color:var(--color-current-pos-card)] text-primary hover:text-primary-foreground rounded-xl">
+                    Download Resume
+                  </LiquidButton>
+                  </Link>
                 </CardContent>
               </Card>
             </TiltContent>
