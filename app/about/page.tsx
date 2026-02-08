@@ -115,7 +115,7 @@ export default function AboutMePage() {
                       <AnimateIcon animateOnView animateOnHover>
                         <Cctv />
                       </AnimateIcon>
-                      <p>Junior Camera Assitant & Runner for ATP Media @ Australian Open.</p>
+                      <p>Junior Camera Assistant & Runner for ATP Media @ Australian Open.</p>
                     </div>
                     <p>2021, 2022</p>
                   </div>
