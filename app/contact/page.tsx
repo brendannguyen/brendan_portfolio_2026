@@ -36,7 +36,7 @@ export default function ContactPage() {
                     Contact me through LinkedIn or via the email below.
                   </p>
                   <Collapsible>
-                    <CollapsibleTrigger><LiquidButton className="text-sm font-medium px-4 py-2 h-10 overflow-hidden [--liquid-button-color:var(--primary)] [--liquid-button-background-color:var(--color-current-pos-card)] text-primary hover:text-primary-foreground rounded-xl">Reveal Email</LiquidButton></CollapsibleTrigger>
+                    <CollapsibleTrigger><LiquidButton className="text-sm font-medium px-4 py-2 h-10 overflow-hidden [--liquid-button-color:var(--primary)] [--liquid-button-background-color:var(--color-current-pos-card)] text-primary hover:text-primary-foreground rounded-xl hover:cursor-pointer">Reveal Email</LiquidButton></CollapsibleTrigger>
                     <CollapsibleContent className="mt-4">
                       <Magnetic range={40} strength={0.25}>
                         <a href={'mailto:' + user + '@' + site} style={{textDecoration: 'none'}}>{user + '@' + site}</a>

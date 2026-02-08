@@ -40,7 +40,7 @@ export default function AboutMePage() {
     <section className="max-w-3xl mx-auto flex flex-col gap-6">
       <Fade >
         <Slide >
-          <Tilt className="pointer-events-none">
+          <Tilt className="pointer-events-none" maxTilt={7}>
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">
@@ -73,7 +73,7 @@ export default function AboutMePage() {
 
       <Fade delay={200}>
         <Slide delay={200}>
-          <Tilt className="pointer-events-none">
+          <Tilt className="pointer-events-none" maxTilt={7}>
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">
@@ -128,7 +128,7 @@ export default function AboutMePage() {
 
       <Fade delay={400}>
         <Slide delay={400}>
-          <Tilt className="pointer-events-none">
+          <Tilt className="pointer-events-none" maxTilt={7}>
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">
@@ -174,7 +174,7 @@ export default function AboutMePage() {
 
       <Fade delay={600}>
         <Slide delay={600}>
-          <Tilt className="pointer-events-none">
+          <Tilt className="pointer-events-none" maxTilt={7}>
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto" id="skills-expanded">
                 <CardHeader className="flex">
@@ -196,7 +196,7 @@ export default function AboutMePage() {
 
       <Fade delay={800}>
         <Slide delay={800}>
-          <Tilt className="pointer-events-none">
+          <Tilt className="pointer-events-none" maxTilt={7}>
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">

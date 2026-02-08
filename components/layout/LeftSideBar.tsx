@@ -62,7 +62,7 @@ export function LeftSidebar() {
         </Fade>
         <Fade>
           <Slide>
-            <Tilt className="pointer-events-none">
+            <Tilt className="pointer-events-none" maxTilt={7}>
               <TiltContent className="pointer-events-auto">
                 <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                   <CardHeader className="flex">
@@ -104,7 +104,7 @@ export function LeftSidebar() {
         </Fade>
         <Fade delay={200}>
           <Slide delay={200}>
-            <Tilt className="pointer-events-none">
+            <Tilt className="pointer-events-none" maxTilt={7}>
               <TiltContent className="pointer-events-auto">
                 <Card className="w-full bg-current-pos-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                   <CardHeader className="flex">
@@ -130,7 +130,7 @@ export function LeftSidebar() {
         </Fade>
         <Fade delay={400}>
           <Slide delay={400}>
-            <Tilt className="pointer-events-none">
+            <Tilt className="pointer-events-none" maxTilt={7}>
               <TiltContent className="pointer-events-auto">
                 <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg">
                   <CardHeader className="flex">
@@ -171,7 +171,7 @@ export function LeftSidebar() {
         </Fade>
         <Fade delay={600}>
           <Slide delay={600}>
-            <Tilt className="pointer-events-none">
+            <Tilt className="pointer-events-none" maxTilt={7}>
               <TiltContent className="pointer-events-auto">
                 <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg">
                   <CardHeader className="flex">

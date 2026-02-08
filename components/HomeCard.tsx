@@ -42,7 +42,7 @@ export default function HomeCard({
     return (
       <Fade delay={animationDelay}>
         <Slide delay={animationDelay}>
-          <Tilt className="pointer-events-none">
+          <Tilt className="pointer-events-none" maxTilt={5}>
             <TiltContent className="pointer-events-auto">
               <Card className="w-full bg-card opacity-80 border-none drop-shadow-lg pointer-events-auto">
                 <CardHeader className="flex">
