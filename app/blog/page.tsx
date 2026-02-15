@@ -28,20 +28,35 @@ export default function AboutMePage() {
 
 
 const BlogCards = [
+  // {
+  //   title: "More projects coming soon...",
+  //   date: "06/02/2026",
+  //   description: "Another project is in the works...",
+  //   media: [
+  //     {
+  //       title: "More to come.",
+  //       type: "image",
+  //       src: "/blog_media/noonecares.jpg",
+  //     },
+  //   ],
+  //   badgeTexts: [],
+  //   buttonLink: "",
+  //   buttonLinkTooltipText: "",
+  // },
   {
-    title: "More projects coming soon...",
-    date: "06/02/2026",
-    description: "Another project is in the works...",
+    title: "RegistaDB: Learning backend database management",
+    date: "15/02/2026",
+    description: "Using RocksDB, I've been learning how to create a C++ middleware for this database. So far I have used ZeroMQ for communication over TCP, with two ports for pull/push & req/rep.\n\nI have also implemented a Java client for testing of ingestion and querying.\n\nThis project has been very interesting so far as I have learnt a lot about how a DBMS works while I attempt to create my own. P.S. I have called it 'RegistaDB'.",
     media: [
       {
-        title: "More to come.",
+        title: "RocksDB logo",
         type: "image",
-        src: "/blog_media/noonecares.jpg",
+        src: "/blog_media/rocksdb_logo.svg",
       },
     ],
-    badgeTexts: [],
-    buttonLink: "",
-    buttonLinkTooltipText: "",
+    badgeTexts: ["RocksDB", "ZeroMQ", "Backend", "Java", "C++", "Database Middleware", "High Performance"],
+    buttonLink: "https://github.com/brendannguyen/RegistaDB",
+    buttonLinkTooltipText: "RegistaDB GitHub Repo",
   },
   {
     title: "Portfolio website now mobile friendly!",
