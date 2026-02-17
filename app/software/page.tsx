@@ -94,6 +94,20 @@ const SoftwareCards = [
     buttonLinkTooltipText: "Explore Now",
   },
   {
+    title: "RegistaDB",
+    description: "I wanted to learn about storage theory, and decided on trying to implement my own database middleware/DBMS using RocksDB.\n\n So far this has taught me a lot about how databases work and the different components that make up a database system. I have implemented a key value store that suppports different data types, implemented two tunnels, one for performance ingest, and the other for smart queries. I have also implemented reverse big-endian keys for high performance queries.\n\nI hope to continue to add more features such as delta updating, batching, scalability and so on.",
+    media: [
+      {
+        title: "RegistaDB Logo",
+        type: "image",
+        src: "/software_media/registaDB_logo.png",
+      }
+    ],
+    badgeTexts: ["C++", "Java", "RocksDB", "Protobuf", "ZeroMQ", "CMake"],
+    buttonLink: "https://github.com/brendannguyen/RegistaDB",
+    buttonLinkTooltipText: "GitHub Repo",
+  },
+  {
     title: "JRVS (University Project)",
     description: "In a year long software practice unit, as a group of 15 people, using the SAFe agile framework, we were tasked with creating an e-learning web application for teenages to learn about A.I. Taking on the role of a system architect, the SA team were tasked with researching and choosing the appropriate tech stack and libraries, and supporting team members in spikes. My agile team is assigned to develop the lesson content and UI elements for the content which includes lessons, quizzes, videos, and other content types. This involved creating page components to display this content, and creating models for content to fectch from the MongoDB database. This includes using controllers and an provider to request lesson content in JSON format.\n\nBIG THANKS to our group presenters in the milestone presentation (9:32 for demo) video!",
     media: [

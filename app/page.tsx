@@ -26,6 +26,14 @@ const HomeCards = [
     buttonLink: "https://bingeoptimizer.vercel.app/",
     buttonLinkTooltipText: "Start Optimizing Now",
   },
+  {
+    title: "RegistaDB",
+    description: "A high-performance C++ middleware engine/DBMS using RocksDB to orchestrate data ingestion streams from applications.\n\nThis project is still in development.",
+    badgeTexts: ["C++", "Java", "RocksDB", "Protobuf", "ZeroMQ"],
+    imageSrc: "/software_media/registaDB_logo.png",
+    buttonLink: "https://github.com/brendannguyen/RegistaDB",
+    buttonLinkTooltipText: "View on GitHub",
+  },
 ]
 
 export const metadata: Metadata = {

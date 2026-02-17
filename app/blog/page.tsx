@@ -44,6 +44,21 @@ const BlogCards = [
   //   buttonLinkTooltipText: "",
   // },
   {
+    title: "RegistaDB: Big-endian keys & more features",
+    date: "17/02/2026",
+    description: "I have added delete functionality to the project. I have also implemented reverse big-endian keys which allows for high performance range queries. By reversing the byte order of the keys, it allows for better locality of reference and improved cache performance when performing range queries.\n\nI have also added index and data column families for more efficient data retrieval, and used Doxygen for C++ documentation.",
+    media: [
+      {
+        title: "RegistaDB logo",
+        type: "image",
+        src: "/software_media/registaDB_logo.png",
+      },
+    ],
+    badgeTexts: ["RegistaDB", "Big-endian Keys", "Column Families", "Java", "C++", "Doxygen"],
+    buttonLink: "https://github.com/brendannguyen/RegistaDB",
+    buttonLinkTooltipText: "RegistaDB GitHub Repo",
+  },
+  {
     title: "RegistaDB: Learning backend database management",
     date: "15/02/2026",
     description: "Using RocksDB, I've been learning how to create a C++ middleware for this database. So far I have used ZeroMQ for communication over TCP, with two ports for pull/push & req/rep.\n\nI have also implemented a Java client for testing of ingestion and querying.\n\nThis project has been very interesting so far as I have learnt a lot about how a DBMS works while I attempt to create my own. P.S. I have called it 'RegistaDB'.",
