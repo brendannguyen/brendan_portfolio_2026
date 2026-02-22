@@ -29,7 +29,7 @@ const HomeCards = [
   {
     title: "RegistaDB",
     description: "A high-performance C++ middleware engine/DBMS using RocksDB to orchestrate data ingestion streams from applications.\n\nThis project is still in development.",
-    badgeTexts: ["C++", "Java", "RocksDB", "Protobuf", "ZeroMQ"],
+    badgeTexts: ["C++", "Java", "RocksDB", "Protobuf", "ZeroMQ", "Grafana", "Prometheus"],
     imageSrc: "/software_media/registaDB_logo.png",
     buttonLink: "https://github.com/brendannguyen/RegistaDB",
     buttonLinkTooltipText: "View on GitHub",

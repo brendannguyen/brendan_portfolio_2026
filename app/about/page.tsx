@@ -26,7 +26,7 @@ export const metadata = {
 };
 
 const skills = [
-  "AWS", "Terraform", "Ansible", "Kubernetes", "MCP", "Python", "JavaScript", "Java", "C", "C++", "React", "NodeJS", "MongoDB", "Splunk", "Machine Learning", "Pytorch", "Geospatial", "Object Oriented Design", "Adobe Premiere Pro", "Adobe Illustrator", "Blender", "Android Studio", "Pro Tools", "UE5", "MIPS Assembly Code", "Git", "MATLAB", "Microsoft Office", "Drafting", "Production Assistance", "Collaborating", "Editing", "Front-end", "Back-end"
+  "AWS", "Terraform", "Ansible", "Kubernetes", "MCP", "Python", "JavaScript", "Java", "C", "C++", "React", "NodeJS", "MongoDB", "Protobuf", "Docker", "Grafana", "Prometheus", "JUnit", "GoogleTest", "Splunk", "Machine Learning", "Pytorch", "Geospatial", "Object Oriented Design", "Adobe Premiere Pro", "Adobe Illustrator", "Blender", "Android Studio", "Pro Tools", "UE5", "MIPS Assembly Code", "Git", "MATLAB", "Microsoft Office", "Drafting", "Production Assistance", "Collaborating", "Editing", "Front-end", "Back-end"
 ]
 
 const interests = [

@@ -44,6 +44,26 @@ const BlogCards = [
   //   buttonLinkTooltipText: "",
   // },
   {
+    title: "RegistaDB: Added docker deployment & Grafana + Prometheus",
+    date: "22/02/2026",
+    description: "In order for RegistaDB to be easily deployment, I have configurated deployment via docker-compose. I have also added support for metrics observability with Grafana + Prometheus.\n\nRocksDB has its own statistics feature, so I leveraged this, and expose this using Prometheus. I then crawl this data using Grafana for visual metric observations. This is an option as enabling metrics does have a ~5% performance hit.",
+    media: [
+      {
+        title: "RegistaDB metrics",
+        type: "image",
+        src: "/blog_media/registadb_metrics.png",
+      },
+      {
+        title: "RegistaDB docker",
+        type: "image",
+        src: "/blog_media/docker-compose.png",
+      },
+    ],
+    badgeTexts: ["RegistaDB", "Docker", "Grafana", "Prometheus", "C++", "docker-compose"],
+    buttonLink: "https://github.com/brendannguyen/RegistaDB",
+    buttonLinkTooltipText: "RegistaDB GitHub Repo",
+  },
+  {
     title: "RegistaDB: Big-endian keys & more features",
     date: "17/02/2026",
     description: "I have added delete functionality to the project. I have also implemented reverse big-endian keys which allows for high performance range queries. By reversing the byte order of the keys, it allows for better locality of reference and improved cache performance when performing range queries.\n\nI have also added index and data column families for more efficient data retrieval, and used Doxygen for C++ documentation.",
