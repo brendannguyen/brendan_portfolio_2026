@@ -44,6 +44,21 @@ const BlogCards = [
   //   buttonLinkTooltipText: "",
   // },
   {
+    title: "RegistaDB: Added RESTful endpoints with Drogon & Swagger UI",
+    date: "24/02/2026",
+    description: "I now added support for RESTful operations using Drogon. As the app now has zeroMQ and Drogon, I also added thread affinity so that zmq always has a free core, makign sure not to degrade performance.\n\nOn top of this, I also added a Swagger UI that can be enabled, for testing and documentation of RESTful endpoints. And of course, I added some more tests for those endpoints.",
+    media: [
+      {
+        title: "RegistaDB Swagger UI",
+        type: "image",
+        src: "/blog_media/registadb_swagger_ui.png",
+      },
+    ],
+    badgeTexts: ["RegistaDB", "Drogon", "Swagger UI", "Thread Affinity", "CPR C++"],
+    buttonLink: "https://github.com/brendannguyen/RegistaDB",
+    buttonLinkTooltipText: "RegistaDB GitHub Repo",
+  },
+  {
     title: "RegistaDB: Added docker deployment & Grafana + Prometheus",
     date: "22/02/2026",
     description: "In order for RegistaDB to be easily deployment, I have configurated deployment via docker-compose. I have also added support for metrics observability with Grafana + Prometheus.\n\nRocksDB has its own statistics feature, so I leveraged this, and expose this using Prometheus. I then crawl this data using Grafana for visual metric observations. This is an option as enabling metrics does have a ~5% performance hit.",
