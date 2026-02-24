@@ -103,7 +103,7 @@ const SoftwareCards = [
         src: "/software_media/registaDB_logo.png",
       }
     ],
-    badgeTexts: ["C++", "Java", "RocksDB", "Protobuf", "ZeroMQ", "CMake", "Docker", "Grafana", "Prometheus", "JUnit", "GoogleTest"],
+    badgeTexts: ["C++", "Java", "RocksDB", "Protobuf", "ZeroMQ", "CMake", "Docker", "Grafana", "Prometheus", "JUnit", "GoogleTest", "Drogon", "Swagger UI"],
     buttonLink: "https://github.com/brendannguyen/RegistaDB",
     buttonLinkTooltipText: "GitHub Repo",
   },
